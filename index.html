@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="users">
+           
+        </div>
+        <script  id="headerTemplate" type="text/template">
+         <header>
+                <form id="addUser" action="#">
+                    <label for="email">Email:</label><input id="email" />
+                    <label for="password">Password:</label><input id="password" />
+                    <input id="numb" type="hidden" />
+                    <button id="add">Add</button>
+                
+                </form>
+            </header>
+             <span class="tr">My email</span>
+        <span class="tr">My password</span>
+        </script>
+         <script id="homeTemplate" type="text/template">
+         <span>Login</span>
+             <form id="addUser" action="#">
+                    <label for="email">Email:</label><input class="email" id="email" required/>
+                    <label for="password">Password:</label><input class="password" id="password" required/>
+                    <input id="numb" class="numb" type="hidden" />
+                    <button id="reg">Sign up</button>
+                    <button id="sign">Sign in</button>
+                </form>
+        </script>
+        <script id="userTemplate" type="text/template">
+            <span class="email"><%= email %></span>
+            <span class="password"><%= password %></span>
+            <span class="numb" style="display:none;"><%= numb %></span>
+            <button class="delete">Delete</button>
+              <button class="edit">Edit</button>
+        </script>
+          <script id="userEditTemplate" type="text/template">
+            <form action="#">
+                <input class="email" value="<%= email %>" />
+                <input class="password" value="<%= password %>" />
+                 <input class="numb" value="<%= numb %>" style="display:none;"/>
+                <button class="save">Save</button>
+                <button class="cancel">Cancel</button>
+            </form>
+        </script>
+        <script src="build.js"></script>
+    </body>
+</html>
